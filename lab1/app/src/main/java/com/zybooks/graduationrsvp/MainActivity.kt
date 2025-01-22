@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.zybooks.graduationrsvp.ui.theme.GraduationRSVPTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -37,6 +38,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GradScreen(modifier: Modifier = Modifier) {
+
     Image(
         painter = painterResource(R.drawable.grad_cap),
         contentDescription = "Graduation cap",
@@ -55,6 +57,7 @@ fun GradScreen(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GradPreview() {
+
     GraduationRSVPTheme {
         GradScreen()
     }
