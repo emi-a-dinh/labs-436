@@ -98,6 +98,7 @@ fun DetailScreen(
 ) {
    val gender = if (pet.gender == PetGender.MALE) "Male" else "Female"
 
+
    Scaffold(
       topBar = {
          PetAppBar(
