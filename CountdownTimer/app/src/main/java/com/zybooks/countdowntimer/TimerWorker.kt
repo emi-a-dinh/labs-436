@@ -23,6 +23,7 @@ class TimerWorker(context: Context, parameters: WorkerParameters) :
     private val notificationManager =
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
+
     override suspend fun doWork(): Result {
         // Get remaining milliseconds from MainActivity
         var remainingMillis = inputData.getLong(KEY_MILLIS_REMAINING, 0)
@@ -58,6 +59,7 @@ class TimerWorker(context: Context, parameters: WorkerParameters) :
             notificationManager.createNotificationChannel(channel)
         }
     }
+
 
     private fun postTimerNotification(text: String) {
         // Create notification with various properties
